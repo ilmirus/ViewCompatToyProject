@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto" android:layout_height="match_parent"
+    android:layout_width="match_parent" android:orientation="horizontal">
+    <us.ilmir.viewcompattoyproject.Hello custom:showText="true" custom:textHeight="20dp" custom:textWidth="110dp"
+        custom:textY="85dp" custom:textX="50dp" android:layout_height="match_parent"
+        android:layout_width="match_parent" android:elevation="2dp" />
+    <Button android:id="@+id/Reset" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="@string/reset_button" />
+</LinearLayout>
