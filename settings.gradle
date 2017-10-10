@@ -1,5 +1,6 @@
 pluginRepositories {
-    maven { url 'https://dl.bintray.com/kotlin/kotlin-dev' }
+    maven { url 'file:///home/user/work/kotlin/build/repo' }
+//    maven { url 'https://dl.bintray.com/kotlin/kotlin-dev' }
     gradlePluginPortal()
 }
 

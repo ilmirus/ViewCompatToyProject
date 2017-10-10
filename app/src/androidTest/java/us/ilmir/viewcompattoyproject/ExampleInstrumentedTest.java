@@ -24,3 +24,4 @@ public class ExampleInstrumentedTest {
         assertEquals("us.ilmir.viewcompattoyproject", appContext.getPackageName());
     }
 }
+

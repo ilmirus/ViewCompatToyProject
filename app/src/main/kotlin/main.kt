@@ -8,7 +8,6 @@ import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.design.widget.Snackbar
 import android.support.v4.view.MotionEventCompat
-import android.support.v4.view.ViewCompat
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.util.AttributeSet
@@ -49,7 +48,7 @@ class Hello @JvmOverloads constructor(
 
         // Set software rendering
         if (!isInEditMode) {
-            ViewCompat.setLayerType(this, View.LAYER_TYPE_SOFTWARE, null)
+            this.setLayerType(View.LAYER_TYPE_SOFTWARE, null)
         }
 
         textPaint.color = Color.BLACK
@@ -62,16 +61,16 @@ class Hello @JvmOverloads constructor(
 
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
-        canvas?.drawText("Hello elevation: " + ViewCompat.getElevation(this), textX, textY, textPaint)
+        canvas?.drawText("Hello elevation: " + this.getElevation(), textX, textY, textPaint)
     }
 
-    override fun onTouchEvent(event: MotionEvent?): Boolean {
-        val action = MotionEventCompat.getActionMasked(event)
+    override fun onTouchEvent(event: MotionEvent): Boolean {
+        val action = event.getActionMasked()
         return when (action) {
             MotionEvent.ACTION_DOWN -> {
                 Log.d("ViewCompatToyProject", "ACTION_DOWN")
-                ViewCompat.setAlpha(this, if (showText) 1f else 0f)
-                ViewCompat.animate(this).alpha(if (showText) 0f else 1f).setDuration(1000)
+                this.setAlpha(if (showText) 1f else 0f)
+                this.animate().alpha(if (showText) 0f else 1f).setDuration(1000)
                 showText = !showText
                 true
             }
@@ -111,3 +110,4 @@ class MainActivity : AppCompatActivity() {
         } else super.onOptionsItemSelected(item)
     }
 }
+
