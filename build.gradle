@@ -1,26 +1,25 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-    ext.kotlin_version = '1.2-SNAPSHOT'
+    ext.kotlin_version = '1.2.30-dev-118'
     repositories {
-        maven { url 'file:///home/user/work/kotlin2/build/repo' }
-//        maven { url 'https://dl.bintray.com/kotlin/kotlin-dev' }
+        maven { url 'https://dl.bintray.com/kotlin/kotlin-dev' }
+        google()
         jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.android.tools.build:gradle:3.0.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-android-compat:$kotlin_version"
         classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
     }
 }
 
 allprojects {
     repositories {
-        maven { url 'file:///home/user/work/kotlin2/build/repo' }
         jcenter()
         maven { url 'https://maven.google.com' }
-//        maven { url 'https://dl.bintray.com/kotlin/kotlin-dev' }
-//        maven { url 'https://dl.bintray.com/jetbrains/anko' }
+        maven { url 'https://dl.bintray.com/kotlin/kotlin-dev' }
     }
 }
 

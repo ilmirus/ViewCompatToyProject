@@ -1,7 +1,7 @@
-pluginRepositories {
-    maven { url 'file:///home/user/work/kotlin2/build/repo' }
-//    maven { url 'https://dl.bintray.com/kotlin/kotlin-dev' }
-    gradlePluginPortal()
-}
+//pluginRepositories {
+//    maven { url 'file:///home/user/work/kotlin2/build/repo' }
+////    maven { url 'https://dl.bintray.com/kotlin/kotlin-dev' }
+//    gradlePluginPortal()
+//}
 
 include ':app'

@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android-compat'
 
 android {
+    buildToolsVersion '26.0.2'
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_6
         targetCompatibility JavaVersion.VERSION_1_6
     }
     compileSdkVersion 26
-    buildToolsVersion "26.0.1"
     defaultConfig {
         applicationId "us.ilmir.viewcompattoyproject"
         minSdkVersion 15
@@ -31,8 +31,8 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'org.jetbrains.kotlin:kotlin-stdlib:1.2-SNAPSHOT'
+    compile 'org.jetbrains.kotlin:kotlin-stdlib:1.2.30-dev-118'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.android.support:design:26.0.0-alpha1'
+    compile 'com.android.support:design:26.0.2'
     testCompile 'junit:junit:4.12'
 }
